@@ -69,12 +69,12 @@ namespace MyWebAPI
             {
                 endpoints.MapControllers();
             });
-            
-            //app.UseStaticFiles(new StaticFileOptions
-            //{
-            //    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Photo")),
-            //    RequestPath = "/Photos"
-            //});
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Photos")),
+                RequestPath = "/Photos"
+            });
         }
     }
 }
